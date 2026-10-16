@@ -17,7 +17,7 @@
 下载本仓库 ZIP 并解压，或运行：
 
 ```sh
-git clone https://github.com/OWNER/clash-party-auto-health.git
+git clone https://github.com/FingerCaster/clash-party-auto-health.git
 cd clash-party-auto-health
 ```
 

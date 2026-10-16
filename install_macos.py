@@ -85,6 +85,7 @@ def main(args):
     for path, content in original.items():
         if content is not None: h.atomic_write(backup / (path.name + '.bak'), content)
     for path, content in files.items(): h.atomic_write(path, content)
+    subprocess.run(['launchctl', 'bootout', f'gui/{os.getuid()}/{LABEL}'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     subprocess.run(['launchctl', 'bootstrap', f'gui/{os.getuid()}', str(plist_path)], check=True)
     print(json.dumps({'installed': True, 'profile_id': current, 'data_dir': str(data), 'backup': str(backup), 'status': str(health / 'status.json')}, ensure_ascii=False, indent=2))
 
