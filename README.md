@@ -1,8 +1,16 @@
 # Clash Party 自动健康隔离
 
+本项目是配合 [Clash Party](https://github.com/mihomo-party-org/clash-party) 使用的第三方本地辅助扩展，不是 Clash Party 内置插件，也不是独立代理客户端。它通过本地覆写和系统后台任务增强自动选择的健康管理能力，需要先安装 Clash Party 并导入订阅。
+
 在每台电脑本地检测 Clash Party 的自动选择节点：持续超时或失败的节点会暂时从 `url-test` 自动组排除，恢复后自动加回。节点仍保留在原始节点列表和手动选择组中。
 
 程序读取 Mihomo 的健康检查记录，生成 Clash Party 本地覆写，并通过后台任务定时维护隔离名单。不依赖 Sub-Store 或共享服务器；每台电脑独立保存自己的订阅绑定和健康状态。
+
+## Clash Party 项目与下载
+
+- 官方项目：[mihomo-party-org/clash-party](https://github.com/mihomo-party-org/clash-party)
+- 安装包下载：[GitHub Releases](https://github.com/mihomo-party-org/clash-party/releases)
+- 官网与使用文档：[clashparty.org](https://clashparty.org/)
 
 ## 安装前准备
 
